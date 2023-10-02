@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Enter a number: ");
         Scanner scanner=new Scanner(System.in);
-        
+
         int n = scanner.nextInt();
         if (n < 0) {
             System.out.println(-1);
@@ -23,14 +23,14 @@ public class Main {
             System.out.println(c);
         }
 
-        long r = fibonacciRec(n);
+        long r = fibonacci(n);
         if (r!= -1) {
             System.out.println(r);
         } else {
             System.out.println(-1);
         }
     }
-    public static long fibonacciRec(int n) {
+    public static long fibonacci(int n) {
         if (n < 0) {
             return -1;
         } else if (n == 0) {
@@ -38,7 +38,7 @@ public class Main {
         } else if (n == 1) {
             return 1;
         } else {
-            return fibonacciRec(n - 1) + fibonacciRec(n - 2);
+            return fibonacci(n - 1) + fibonacci(n - 2);
         }
     }
 }
